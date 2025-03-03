@@ -13,5 +13,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Print API Key
-        run: echo "API Key: ${{ secrets.API_KEY }}"
+      - name: Verify API Key is Set
+        run: |
+          if [ -z "${{ secrets.API_KEY }}" ]; then
+            echo "API_KEY is not set!"
+            exit 1
+          else
+            echo "API_KEY is successfully accessed!"
+          fi
