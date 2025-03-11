@@ -1,0 +1,29 @@
+mkdir secure-lab
+
+cd secure-lab
+
+git init
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git commit -m "commit message"
+
+git remote add origin https://github.com/sarniraula/sec-lab.git
+
+git push -u origin master
